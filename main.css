@@ -1,0 +1,265 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  font-size: 62.5%;
+  text-rendering: auto;
+}
+
+body {
+  font-family: "Lato";
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.navigation__nav {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  z-index: 1000;
+  width: 100%;
+}
+
+.navigation__logobox {
+  margin: 1rem 0 0 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: 1.5px solid #333;
+}
+
+.navigation__logo {
+  font-size: 3rem;
+  padding: 0.3rem 0.5rem;
+  color: #333;
+  font-weight: 700;
+}
+
+.navigation__list {
+  background-color: transparent;
+  list-style: none;
+  display: flex;
+}
+
+.navigation__item {
+  margin-right: 3rem;
+}
+
+.navigation__link:link, .navigation__link:visited {
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 1rem;
+  display: inline-block;
+  transition: all 0.2s;
+}
+
+.navigation__link:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.home {
+  width: 100%;
+  height: 100vh;
+  background-color: #eee;
+  background-size: cover;
+  position: relative;
+}
+
+.home__header-area {
+  background-image: url(../img/mg-6.jpg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  width: 55%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.home__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #eee;
+  padding: 4rem 20rem;
+}
+
+.home__heading {
+  font-size: 8rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  letter-spacing: 0.5rem;
+  color: #222;
+  font-weight: 300;
+}
+
+.home__subheading {
+  color: #275e56;
+  font-size: 2rem;
+  align-self: center;
+  text-transform: lowercase;
+  letter-spacing: 1rem;
+  font-weight: 700;
+  margin-bottom: 5rem;
+}
+
+.home__btn-myWorks:link, .home__btn-myWorks:visited {
+  font-size: 1.4rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+  border: 2px solid #222;
+  display: inline-block;
+  color: #222;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  box-shadow: 1px 3px 1rem rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
+}
+
+.home__btn-myWorks:hover {
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 5px 7px 10px rgba(0, 0, 0, 0.8);
+}
+
+.home__btn-myWorks:active {
+  transform: translateY(2px) scale(1);
+  box-shadow: 1px 3px black;
+}
+
+.home .scroll {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 50%;
+  left: 3rem;
+  transform: translateY(-50%);
+  z-index: 9999;
+}
+
+.home .scroll__text {
+  font-size: 1.2rem;
+  transform: rotate(-90deg);
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  color: #333;
+}
+
+.home .scroll__icon {
+  height: 3rem;
+  width: 3rem;
+  transform: rotate(180deg);
+  fill: #333;
+}
+
+.home .index__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+  right: 4rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 9999;
+}
+
+.home .index__item:not(:last-child) {
+  margin-bottom: 1.4rem;
+}
+
+.home .index__link:link, .home .index__link:visited {
+  display: block;
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  height: 0.5rem;
+  width: 0.5rem;
+  padding: 0.4rem;
+}
+
+.home .index .checked {
+  background-color: #000;
+}
+
+.home .social {
+  position: fixed;
+  bottom: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 9999;
+}
+
+.home .social__list {
+  margin-left: 5rem;
+  list-style-type: none;
+  display: flex;
+}
+
+.home .social__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home .social__item:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.home .social__link:link, .home .social__link:visited {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  padding: 1rem;
+}
+
+.home .social__icon {
+  height: 1.6rem;
+  width: 1.6rem;
+  fill: #333;
+}
+
+.home .social__textbox {
+  margin-right: 3rem;
+}
+
+.home .social__text {
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.home .social__text span {
+  font-size: 1.6rem;
+}
+
+#about {
+  height: 50rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10rem;
+}
+/*# sourceMappingURL=main.css.map */
